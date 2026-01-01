@@ -11,7 +11,7 @@ weatherBtn.addEventListener("click", function () {
     error.textContent = "";
 
     if (cityName === "") {
-        error.textContent = "Please enter a city name.";
+        error.textContent = "Empty input";
         return;
     }
 
@@ -36,7 +36,7 @@ weatherBtn.addEventListener("click", function () {
                 })
                 .then(function (weatherData) {
                     if (!weatherData.current_weather) {
-                        error.textContent = "Weather data unavailable.";
+                        error.textContent = "Missing Weather data";
                         return;
                     }
 
@@ -50,11 +50,11 @@ weatherBtn.addEventListener("click", function () {
                     `;
                 })
                 .catch(function () {
-                    error.textContent = "Failed to fetch weather data.";
+                    error.textContent = "Failed API requests";
                 });
         })
         .catch(function () {
-            error.textContent = "Failed to fetch location data.";
+            error.textContent = "Failed API requests";
         });
 });
 

@@ -1,0 +1,44 @@
+Problem Statement
+Your friend wants a simple webpage where they can type a city name and instantly see the current weather. 
+The page should let them enter a city, click a button, and view basic weather details for that location.
+
+API Information
+To get weather information for a city, your code must follow two steps:
+
+Convert the city name into coordinates (latitude & longitude) using the Geocoding API:
+https://open-meteo.com/en/docs/geocoding-api
+
+Fetch the current weather using those coordinates using the Weather Forecast API:
+https://open-meteo.com/en/docs
+
+To request the current weather in the Forecast API, include the parameter current_weather=true.
+Before you start coding,, read both documentation pages carefully to understand how the request URLs work and which JSON fields you need.
+
+Testing and Debugging
+To fully understand the challenge, you should follow these two steps:
+
+Use Postman to learn how the API behaves
+Send a test request to the API endpoint.
+Check the response to understand which fields you will receive.
+This helps you understand what your request and response will look like before writing any code.
+Build and test your project locally
+Write your code on your local computer using an index.html and script.js file.
+Open your HTML file in the browser to test your interface and API calls.
+Use DevTools effectively:
+Sources tab: to debug your JavaScript step by step and inspect variables.
+Network tab: to see each request your page makes, what data was sent, and what response came back.
+
+Your Task
+Create a webpage with:
+An input box for the city name.
+A "Get Weather" button.
+A section where the weather details will appear.
+When the user clicks the button:
+Call the Geocoding API to get the city’s latitude, longitude, and country.
+Use the latitude and longitude, along with current_weather=true, to call the Weather Forecast API and get the temperature and windspeed.
+If everything works, display the city name, country, temperature (°C), and windspeed in the weather section.
+Handle errors such as:
+Empty input.
+City not found.
+Missing weather data.
+Failed API requests.
